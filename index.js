@@ -7,9 +7,9 @@ function _setTarget(grunt, name, options) {
   });
 }
 
-function extendBump(grunt, pluginName, targets) {
+function extendBump(grunt, plugin, targets) {
 
-  require(pluginName)(grunt);
+  plugin(grunt);
 
   for (var key in targets) {
     if (targets.hasOwnProperty(key)) {
