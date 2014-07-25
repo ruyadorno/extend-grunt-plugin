@@ -1,4 +1,4 @@
-# extend-grunt-task
+# extend-grunt-plugin
 
-Helper method to easily extend an already existing grunt task.
+Helper method to easily extend a grunt plugin.
 
