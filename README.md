@@ -19,7 +19,7 @@ npm install extend-grunt-plugin --save-dev
 
 ## Usage
 
-Giving that you are actually creating your grunt task as a separate plugin, let's assume that you want to invoke the `grunt-bump` plugin from inside your task.
+Giving that you are actually creating your grunt task as a separate plugin, let's assume that you want to invoke the `grunt-bump` plugin from inside your task. First of all make sure that you have installed the desired dependency (in this case grunt-bump) locally in your project using npm.
 
 Here is what the setup should look like:
 
