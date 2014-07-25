@@ -1,0 +1,10 @@
+{
+  "name": "extend-grunt-plugin",
+  "version": "0.0.1",
+  "description": "Helper method to easily extend a grunt plugin.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruyadorno/extend-grunt-plugin.git"
+  },
+  "author": "Ruy Adorno"
+}
