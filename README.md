@@ -8,6 +8,15 @@ Helper method to easily extend a grunt plugin.
 Reusing a grunt plugin from inside your own plugin is not as straightforward as expected. This small module takes care of forwarding the configurations from your plugin to whatever other plugin you need to use.
 
 
+## Install
+
+You can install this module using **npm**:
+
+```shell
+npm install extend-grunt-plugin --save-dev
+```
+
+
 ## Usage
 
 Giving that you are actually creating your grunt task as a separate plugin, let's assume that you want to invoke the `grunt-bump` plugin from inside your task.
