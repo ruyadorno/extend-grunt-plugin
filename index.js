@@ -2,9 +2,20 @@
 
 
 function _setTarget(grunt, name, options) {
-  grunt.config.set(name, {
-    options: options
-  });
+
+  var config;
+  var isMultiTask = name.indexOf('.') > -1;
+
+  if (isMultiTask) {
+    config = options;
+  } else {
+    config = {
+      options: options
+    };
+  }
+
+  grunt.config.set(name, config);
+
 }
 
 function extendBump(grunt, plugin, targets) {

@@ -46,6 +46,32 @@ module.exports = function (grunt) {
 };
 ```
 
+### Multi tasks
+
+Grunt multi tasks are those that allows you to define different targets. Many grunt plugins are multi-tasks, in order to correctly configure it, always define your options using *modulename.target* notation. See what it looks like in the example below:
+
+```js
+var extendGruntPlugin = require('extend-grunt-plugin');
+
+module.exports = function (grunt) {
+  grunt.registerMultiTask('my_awesome_task', function () {
+
+    var options = {
+      src: "https://raw.githubusercontent.com/ruyadorno/extend-grunt-plugin/master/index.js",
+      dest: "testfile.js"
+    };
+
+    // Creates a "curl.getstuff" target on grunt, that can be run later
+    extendGruntPlugin(grunt, require('grunt-curl'), {
+      'curl.getstuff' : options
+    });
+
+    // Runs the "curl:getstuff" subtask :)
+    grunt.task.run('curl:getstuff');
+  });
+};
+```
+
 
 ## License
 
